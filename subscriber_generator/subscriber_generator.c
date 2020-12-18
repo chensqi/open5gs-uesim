@@ -84,15 +84,20 @@ int create_subscriber(int num_of_subscriber) {
                     "\"subscriber_status\" : 0, "
                     "\"access_restriction_data\" : 32, "
                     "\"security\" : { ";
-            char k_str[] = "\"k\" : \"465B5CE8 B199B49F AA5F0A2E E238A6BC\", ";
-            char opc_str[] = "\"opc\" : \"E8ED289D EBA952E4 283B54E8 8E6183CA\", ";
+            char k_str[] = "\"k\" : \"70d49a71dd1a2b806a25abe0ef749f1e\", ";
+            char opc_str[] = "\"opc\" : \"6f1bf53d624b3a43af6592854e2444c7\", ";
             char amf_str[] = "\"amf\" : \"8000\", ";
-            char sqn_str[] = "\"sqn\" : { \"$numberLong\" : \"64\" }, ";
-            char rand_str[] = "\"rand\" : \"20080C38 18183B52 2614162C 07601D0D\" ";
-            char json5[] =
-                    "}, "
-                    "\"__v\" : 0 "
-                    "}";
+            char sqn_str[] = "\"sqn\" : { \"$numberLong\" : \"25235952177090\" } ";
+            //char rand_str[] = "\"rand\" : \"20080C38 18183B52 2614162C 07601D0D\" ";
+	    char rand_str[] = "";
+            char json5[] =         "}, "
+        "\"subscribed_rau_tau_timer\" : 12,"
+        "\"network_access_mode\" : 2, "
+        "\"subscriber_status\" : 0, "
+        "\"access_restriction_data\" : 32, "
+        "\"__v\" : 0 "
+      "}";
+
             char *json;
             json = malloc( (1 + strlen(json1) + +strlen(oid_1) +
                                     strlen(imsi) + strlen(json2) + strlen(json3) + strlen(oid_2) + strlen(json4) +
